@@ -1,0 +1,55 @@
+{
+  "name": "public-transport-js",
+  "version": "0.0.1",
+  "description": "Provides information about public transport stations and the next departures of them",
+  "files": [
+    "lib/**/*"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "release": "npm version minor && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickbw2003/public-transport-js.git"
+  },
+  "keywords": [
+    "public",
+    "transport",
+    "js",
+    "departures",
+    "stations",
+    "kvv"
+  ],
+  "author": "nickbw2003",
+  "license": "MIT",
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/xml2js": "^0.4.3",
+    "jest": "^23.6.0",
+    "prettier": "1.15.3",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "moment": "^2.23.0",
+    "xml2js": "^0.4.19"
+  }
+}
