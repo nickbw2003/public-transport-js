@@ -55,8 +55,8 @@ export class KvvStationProvider implements StationProvider {
               .map(o => {
                 return <Station>{
                   id: o.$.id,
-                  lat: parseFloat(o.$.y),
-                  lng: parseFloat(o.$.x),
+                  lat: parseFloat(o.$.y) / 1e6,
+                  lng: parseFloat(o.$.x) / 1e6,
                   locality: o.$.locality,
                   name: o.$.objectName,
                 };
@@ -113,8 +113,8 @@ export class KvvStationProvider implements StationProvider {
                 return <Station>{
                   id: attributes.id,
                   distance: attributes.distance,
-                  lat: parseFloat(splittedCoordinates[1]),
-                  lng: parseFloat(splittedCoordinates[0]),
+                  lat: parseFloat(splittedCoordinates[1]) / 1e6,
+                  lng: parseFloat(splittedCoordinates[0]) / 1e6,
                   locality: attributes.locality,
                   name: attributes.name,
                 };
