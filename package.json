@@ -17,7 +17,9 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "release": "git fetch && git checkout master && git merge develop && npm version minor && npm publish"
+    "prerelease": "git fetch && git checkout master && git merge develop",
+    "release": "npm version minor && npm publish",
+    "postrelease": "git checkout develop && git merge master && git push"
   },
   "repository": {
     "type": "git",
