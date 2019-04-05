@@ -4,10 +4,10 @@ import { AbstractEfaProvider } from './../base/AbstractEfaProvider';
 import { EfaStationProvider } from './../base/EfaStationProvider';
 import { EfaDepartureProvider } from './../base/EfaDepartureProvider';
 
-export const baseUrl: string = 'https://projekte.kvv-efa.de/sl3/';
+export const baseUrl: string = 'https://www2.vvs.de/vvs/';
 
-export class KvvProvider extends AbstractEfaProvider {
-  network: Network = Network.Kvv;
+export class VvsProvider extends AbstractEfaProvider {
+  network: Network = Network.Vvs;
   protected stationProvider: StationProvider = new EfaStationProvider(baseUrl);
   protected departureProvider: DepartureProvider = new EfaDepartureProvider(baseUrl);
 }
