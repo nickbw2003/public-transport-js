@@ -6,7 +6,7 @@ import { Departure } from './../../common/models/Departure';
 import providers from './providers';
 
 export class EfaService implements NetworkService {
-  readonly networks: Network[] = [Network.Kvv];
+  readonly networks: Network[] = [Network.Kvv, Network.Vvs];
 
   async stationsByLatLng(network: Network, lat: number, lng: number): Promise<Station[]> {
     return await this.getEfaProvider(network).byLatLng(lat, lng);

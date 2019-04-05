@@ -2,11 +2,13 @@
 
 This package enables you to query for public transport stations and departures of them. Currently the following networks are supported:
 
-  * KVV (Karlsruher Verkehrsverbund, Germany)
+- KVV (Karlsruher Verkehrsverbund, Germany)
+- VVS (Verkehrs- und Tarifverbund Stuttgart, Germany)
 
 More networks will be added from time to time. Feel free to contribute - the package is already designed to support multiple networks.
 
 ## Installation
+
 This package is available through the [npm registry](https://www.npmjs.com/). Before installing it make sure that you have installed [Node.js](https://nodejs.org/en/download/).
 
 ```bash
@@ -14,6 +16,7 @@ $ npm install public-transport-js
 ```
 
 ## Usage
+
 Using this package is quite simple. See the following samples to have an idea what you can do with it.
 
 ```js
@@ -31,4 +34,4 @@ const departures = await publicTransportService.departuresByOriginStation(Networ
 
 ## License
 
-  [MIT](LICENSE)
+[MIT](LICENSE)

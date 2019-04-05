@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosInstance } from 'axios';
 import * as moment from 'moment';
 import * as querystring from 'querystring';
 import urlBuilder from './../../util/urlBuilder';
@@ -6,7 +6,6 @@ import xmlParser from './../../util/xmlParser';
 import { DepartureProvider } from './../EfaProvider';
 import { Departure } from './../../../../common/models/Departure';
 import { Line } from './../../../../common/models/Line';
-import { baseUrl } from '.';
 import {
   XsltDepartureMonitorRequestResult,
   ItdDeparture,
@@ -14,10 +13,14 @@ import {
   ItdDateTime2,
 } from './../../models/XsltDepartureMonitorRequestResult';
 
-export class KvvDepartureProvider implements DepartureProvider {
-  private readonly httpClient = axios.create({
-    baseURL: baseUrl,
-  });
+export class EfaDepartureProvider implements DepartureProvider {
+  private readonly httpClient: AxiosInstance;
+
+  constructor(baseUrl: string) {
+    this.httpClient = axios.create({
+      baseURL: baseUrl,
+    });
+  }
 
   async byOriginStation(
     originStationId: string,

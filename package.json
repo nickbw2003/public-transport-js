@@ -36,7 +36,8 @@
   "author": "nickbw2003",
   "license": "MIT",
   "jest": {
-    "preset": "ts-jest"
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   },
   "devDependencies": {
     "@types/jest": "^23.3.10",

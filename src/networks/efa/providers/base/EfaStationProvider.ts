@@ -1,18 +1,21 @@
-import axios from 'axios';
+import axios, { AxiosInstance } from 'axios';
 import * as querystring from 'querystring';
 import { StationProvider } from './../EfaProvider';
 import { Station } from './../../../../common/models/Station';
 import { LocationType } from './../../../../common/models/LocationType';
-import { XmlCoordRequestResult } from '../../models/XmlCoordRequestResult';
+import { XmlCoordRequestResult } from './../../models/XmlCoordRequestResult';
 import { XmlStopFinderRequestResult } from './../../models/XmlStopFinderRequestResult';
-import { baseUrl } from '.';
 import xmlParser from './../../util/xmlParser';
 import urlBuilder from './../../util/urlBuilder';
 
-export class KvvStationProvider implements StationProvider {
-  private readonly httpClient = axios.create({
-    baseURL: baseUrl,
-  });
+export class EfaStationProvider implements StationProvider {
+  private readonly httpClient: AxiosInstance;
+
+  constructor(baseUrl: string) {
+    this.httpClient = axios.create({
+      baseURL: baseUrl,
+    });
+  }
 
   async byName(name: string): Promise<Station[]> {
     const params = {
