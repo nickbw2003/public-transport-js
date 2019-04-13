@@ -1,0 +1,16 @@
+[
+  {
+    "network": "Kvv",
+    "name": "Karlsruher Verkehrsverbund",
+    "country": "Germany",
+    "lat": 48.993997,
+    "lng": 8.400558
+  },
+  {
+    "network": "Vvs",
+    "name": "Verkehrs- und Tarifverbund Stuttgart",
+    "country": "Germany",
+    "lat": 48.783889,
+    "lng": 9.181667
+  }
+]

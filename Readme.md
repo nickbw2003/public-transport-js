@@ -30,6 +30,9 @@ const stationsByLatLng = await publicTransportService.stationsByLatLng(Network.K
 
 // to get a list of departures of a specific station pass the network and station ID to the following method
 const departures = await publicTransportService.departuresByOriginStation(Network.Kvv, '7000090');
+
+// get a NetworkInfo object containing information like the full name, country and location of a specific network
+const networkInfo = await publicTransportService.networkInfo(Network.Kvv);
 ```
 
 ## License
