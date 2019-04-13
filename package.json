@@ -3,7 +3,8 @@
   "version": "0.6.0",
   "description": "Provides information about public transport stations and the next departures of them",
   "files": [
-    "lib/**/*"
+    "lib/**/*",
+    "networkInfo.json"
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
