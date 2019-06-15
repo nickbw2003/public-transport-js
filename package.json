@@ -43,16 +43,17 @@
   "devDependencies": {
     "@types/jest": "^23.3.10",
     "@types/xml2js": "^0.4.3",
-    "jest": "^23.6.0",
+    "jest": "^24.8.0",
     "prettier": "1.15.3",
-    "ts-jest": "^23.10.5",
+    "ts-jest": "^24.0.2",
     "tslint": "^5.12.0",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.17.0",
+    "tsutils": "^3.14.0",
     "typescript": "^3.2.2"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "moment": "^2.23.0",
     "xml2js": "^0.4.19"
   }
