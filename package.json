@@ -1,6 +1,6 @@
 {
   "name": "public-transport-js",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Provides information about public transport stations and the next departures of them",
   "files": [
     "lib/**/*",
@@ -20,7 +20,7 @@
     "postversion": "git push && git push --tags",
     "prerelease": "git fetch && git checkout master && git merge develop",
     "release": "npm version minor && npm publish",
-    "postrelease": "git checkout develop && git merge master && git push --all --tags origin"
+    "postrelease": "git checkout develop && git merge master && git push --all && git push --tags"
   },
   "repository": {
     "type": "git",
