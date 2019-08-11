@@ -1,6 +1,6 @@
 {
   "name": "public-transport-js",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Provides information about public transport stations and the next departures of them",
   "files": [
     "lib/**/*",
