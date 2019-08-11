@@ -1,5 +1,8 @@
 # public-transport-js
 
+[![Build Status](https://app.bitrise.io/app/1af33986c1fe4b7e/status.svg?token=WgAwmW5fLb40BXKieqms7w&branch=master)](https://app.bitrise.io/app/1af33986c1fe4b7e)
+
+
 This package enables you to query for public transport stations and departures of them. Currently the following networks are supported:
 
 - KVV (Karlsruher Verkehrsverbund, Germany)
