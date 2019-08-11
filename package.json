@@ -20,7 +20,7 @@
     "postversion": "git push && git push --tags",
     "prerelease": "git fetch && git checkout master && git merge develop",
     "release": "npm version minor && npm publish",
-    "postrelease": "git checkout develop && git merge master && git push"
+    "postrelease": "git checkout develop && git merge master && git push --all origin"
   },
   "repository": {
     "type": "git",
