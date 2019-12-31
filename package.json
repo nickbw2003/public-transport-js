@@ -8,6 +8,9 @@
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">=12.14.0"
+  },
   "scripts": {
     "build": "tsc",
     "test": "jest",
@@ -41,20 +44,20 @@
     "testEnvironment": "node"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.10",
-    "@types/xml2js": "^0.4.3",
-    "jest": "^24.8.0",
-    "prettier": "1.15.3",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.12.0",
-    "tslint-config-airbnb": "^5.11.1",
-    "tslint-config-prettier": "^1.17.0",
-    "tsutils": "^3.14.0",
-    "typescript": "^3.2.2"
+    "@types/jest": "^24.0.25",
+    "@types/xml2js": "^0.4.5",
+    "jest": "^24.9.0",
+    "prettier": "1.19.1",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.1",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tsutils": "^3.17.1",
+    "typescript": "^3.7.4"
   },
   "dependencies": {
     "axios": "^0.19.0",
-    "moment": "^2.23.0",
-    "xml2js": "^0.4.19"
+    "moment": "^2.24.0",
+    "xml2js": "^0.4.22"
   }
 }
